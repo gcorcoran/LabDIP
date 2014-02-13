@@ -10,7 +10,7 @@ package dip.lab2.student.solution1;
  *
  * @author Pip
  */
-public class GoodServicePolicy  implements ServiceQuality {
+public class GoodServicePolicy implements ServiceQuality {
 
     @Override
     public double getRate() {

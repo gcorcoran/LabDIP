@@ -29,18 +29,19 @@ public class Startup {
         ServiceQuality quality2 = new FairServicePolicy();
         ServiceQuality quality3 = new PoorServicePolicy();
         
-        
-        
-        //quality, then bill amount in constructor
+        //ServiceQuality object, then bill amount in constructor
         //TipCalculator calc = new FoodServiceTipCalculator(quality, 20.0);
         
-        //quality, then bags in constructor
-        TipCalculator calc = new BaggageServiceTipCalculator(quality1, 5);
-        TipCalculator calc2 = new FoodServiceTipCalculator(quality2, 20.0);
-        TipCalculator calc3 = new FoodServiceTipCalculator(quality3, 20.0);
-        System.out.println("The tip is " + calc.getTip());
-        System.out.println("The tip is " + calc2.getTip());
-        System.out.println("The tip is " + calc3.getTip());
+        //ServiceQuality object, then bags in constructor
+        TipCalculator calc = new BaggageServiceTipCalculator(5);
+        
+        TipCalculator calc2 = new FoodServiceTipCalculator(20.0);
+        TipCalculator calc3 = new FoodServiceTipCalculator(20.0);
+        
+        TipService tipper = new TipService(quality1, calc);
+        TipService tipper2 = new TipService(quality2, calc2);
+        TipService tipper3 = new TipService(quality3, calc3);
+        
     }
 
 }

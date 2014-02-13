@@ -14,12 +14,12 @@ public class BaggageServiceTipCalculator implements TipCalculator  {
     private int bagCount;
     private double tipPercentage;
     
-    public BaggageServiceTipCalculator(ServiceQuality q, int bags) {
-        tipPercentage = q.getRate();
+    public BaggageServiceTipCalculator(/*ServiceQuality q,*/ int bags) {
+        //tipPercentage = q.getRate();
         this.setBagCount(bags);
     }
     
-    public double getTip(){
+    public double getTip(double tipPercentage){
         return bagCount+(bagCount*tipPercentage);
     }
 

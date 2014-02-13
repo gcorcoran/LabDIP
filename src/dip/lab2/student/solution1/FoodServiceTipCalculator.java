@@ -13,13 +13,13 @@ public class FoodServiceTipCalculator implements TipCalculator {
     private double tipPercentage;
     private double bill;
     
-    public FoodServiceTipCalculator(ServiceQuality q, double billAmt) {
-        tipPercentage = q.getRate();
+    public FoodServiceTipCalculator(/*ServiceQuality q,*/ double billAmt) {
+        //tipPercentage = q.getRate();
         bill = billAmt;
     }
 
     @Override
-    public double getTip() {
+    public double getTip(double tipPercentage) {
         return tipPercentage * bill;
     }
 

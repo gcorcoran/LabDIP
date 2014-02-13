@@ -7,13 +7,20 @@ package dip.lab1.student.solution1;
  *
  * @author your name goes here
  */
-public class Employee2 implements Employee{
+public class SalariedWithBonusEmployee implements Employee{
     // You gotta question if these are appropriate for ALL employees?
     private double hourlyRate;
     private double totalHrsForYear;
     private double annualSalary;
     private double annualBonus;
 
+    public SalariedWithBonusEmployee(double annualSalary, double annualBonus) {
+        setAnnualSalary(annualSalary);
+        setAnnualBonus(annualBonus);
+    }
+    
+    
+    
     /**
      * Returns annual wages for hourly workers. Is this polymorphic?
      * Could it be? Does it belong here?

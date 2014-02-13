@@ -18,8 +18,8 @@ public class Startup {
 
         //Low-level modules
         Employee emp1 = new HourlyEmployee(10.50, 2020);
-        Employee emp2 = new SalariedEmployee(45000, 1250);
-        Employee emp3 = new SalariedEmployee(90000,0);
+        Employee emp2 = new SalariedWithBonusEmployee(45000, 1250);
+        Employee emp3 = new SalariedEmployee(90000);
 
         // High-level module
         HRService hr = new HRService();

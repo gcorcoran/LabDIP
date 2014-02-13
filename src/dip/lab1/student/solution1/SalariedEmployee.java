@@ -6,8 +6,10 @@ package dip.lab1.student.solution1;
  *
  * @author your name goes here
  */
-public class SalariedEmployee extends Employee2 implements Employee{
+public class SalariedEmployee implements Employee{
 
+    private double annualSalary;
+    
     /** default constructor. Is this the best way to go? */
     public SalariedEmployee() {}
 
@@ -16,9 +18,23 @@ public class SalariedEmployee extends Employee2 implements Employee{
      * @param annualSalary - the employee's annual salary
      * @param annualBonus - a bonus benefit, if any
      */
-    public SalariedEmployee(double annualSalary, double annualBonus) {
+    public SalariedEmployee(double annualSalary) {
         setAnnualSalary(annualSalary);
-        setAnnualBonus(annualBonus);
+    }
+
+    public double getAnnualSalary() {
+        return annualSalary;
+    }
+
+    public void setAnnualSalary(double annualSalary) {
+        this.annualSalary = annualSalary;
+    }
+
+    
+    
+    @Override
+    public double getAnnualWages() {
+        return annualSalary;
     }
 
     

@@ -30,7 +30,7 @@ public class SalariedWithBonusEmployee implements Employee{
      */
     @Override
     public double getAnnualWages() {
-        return hourlyRate * totalHrsForYear;
+        return annualSalary + annualBonus;
     }
 
     /**

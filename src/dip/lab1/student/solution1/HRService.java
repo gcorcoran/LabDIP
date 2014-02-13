@@ -78,6 +78,9 @@ public class HRService {
 
         } else if(e instanceof SalariedEmployee) {
             annualCompensation = e.getAnnualWages();
+            
+        } else if(e instanceof SalariedWithBonusEmployee) {
+        annualCompensation = e.getAnnualWages();
 
         } else {
             JOptionPane.showMessageDialog(
